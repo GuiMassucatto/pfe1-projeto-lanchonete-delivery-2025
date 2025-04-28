@@ -1,83 +1,85 @@
+@import url(./style.css);
+
 .container {
-    width: 100%;
-    max-width: 1000px;
-    margin: auto;
-    padding: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    box-sizing: border-box;
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    background-color: white;
-  }
-  
-  th, td {
-    padding: 8px;
-    text-align: left;
-    border: 1px solid #000000;
-  }
-  
-  th {
-    background-color: #ffcc00;
-    color: rgb(5, 5, 5);
-  }
-  
-  tr:nth-child(even) {
-    background-color: #e2dede;
-  }
-  
-  .topo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  
-  .btn-voltar {
-    background-color: #FFCC00;
-    padding: 8px 12px;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  .total {
-    margin-top: 15px;
-    font-weight: bold;
-     background-color: #FFCC00;
-  }
-  
-  @media (max-width: 768px) {
-    table, thead, tbody, th, td, tr {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: var(--c5);
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border: 1px solid var(--c1);
+}
+
+th {
+  background-color: var(--c2);
+  color: var(--c1);
+}
+
+tr:nth-child(even) {
+  background-color: var(--c4);
+}
+
+.topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.btn-voltar {
+  background-color: var(--c2);
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.total {
+  margin-top: 15px;
+  font-weight: bold;
+  background-color: var(--c2);
+}
+
+@media (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
       display: block;
-    }
-  
-    thead {
+  }
+
+  thead {
       display: none;
-    }
-  
-    tr {
+  }
+
+  tr {
       margin-bottom: 15px;
-      border: 1px solid #ccc;
-      background-color: white;
+      border: 1px solid var(--c4);
+      background-color: var(--c5);
       padding: 10px;
       border-radius: 10px;
-    }
-  
-    td {
+  }
+
+  td {
       border: none;
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid var(--c4);
       position: relative;
       padding-left: 50%;
       text-align: right;
-    }
-  
-    td::before {
+  }
+
+  td::before {
       content: attr(data-label);
       position: absolute;
       left: 10px;
@@ -85,9 +87,9 @@
       font-weight: bold;
       text-align: left;
       white-space: nowrap;
-    }
-  
-    td:last-child {
-      border-bottom: none;
-    }
   }
+
+  td:last-child {
+      border-bottom: none;
+  }
+}
